@@ -60,27 +60,27 @@ document.addEventListener("scroll", (event) => {
     navScrollChanges(window.scrollY);
 })
 
-// Dark Mode
-const toggleDarkMode = () => {
-    let darkMode = localStorage.getItem("darkMode")
+// // Dark Mode
+// const toggleDarkMode = () => {
+//     let darkMode = localStorage.getItem("darkMode")
     
-    if(darkMode !== "enabled") {
-        document.body.classList.add("darkmode")
-        localStorage.setItem("darkMode", 'enabled')
-    }
-    else {
-        document.body.classList.remove("darkmode")
-        localStorage.setItem("darkMode", 'disabled')
-    }
-}
+//     if(darkMode !== "enabled") {
+//         document.body.classList.add("darkmode")
+//         localStorage.setItem("darkMode", 'enabled')
+//     }
+//     else {
+//         document.body.classList.remove("darkmode")
+//         localStorage.setItem("darkMode", 'disabled')
+//     }
+// }
 
-window.addEventListener("load", () => {
-    let darkMode = localStorage.getItem("darkMode")
+// window.addEventListener("load", () => {
+//     let darkMode = localStorage.getItem("darkMode")
     
-    if(darkMode === "enabled") {
-        document.body.classList.add("darkmode")
-    }
+//     if(darkMode === "enabled") {
+//         document.body.classList.add("darkmode")
+//     }
 
-    let nav = document.getElementById("nav");
-    nav && activeNavButton(nav, window.scrollY);
-})
+//     let nav = document.getElementById("nav");
+//     nav && activeNavButton(nav, window.scrollY);
+// })
