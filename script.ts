@@ -74,13 +74,13 @@ document.addEventListener("scroll", (event) => {
 //     }
 // }
 
-// window.addEventListener("load", () => {
-//     let darkMode = localStorage.getItem("darkMode")
+window.addEventListener("load", () => {
+    // let darkMode = localStorage.getItem("darkMode")
     
-//     if(darkMode === "enabled") {
-//         document.body.classList.add("darkmode")
-//     }
+    // if(darkMode === "enabled") {
+    //     document.body.classList.add("darkmode")
+    // }
 
-//     let nav = document.getElementById("nav");
-//     nav && activeNavButton(nav, window.scrollY);
-// })
+    let nav = document.getElementById("nav");
+    nav && activeNavButton(nav, window.scrollY);
+})
