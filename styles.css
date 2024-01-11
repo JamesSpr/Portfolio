@@ -1,5 +1,5 @@
 :root {
-    font-size: 14pt;
+    font-size: 12pt;
     --font-colour: 235, 235, 235; 
     --primary-colour: 35, 101, 89;
     --secondary-colour: 97, 189, 149;
@@ -46,8 +46,16 @@ header {
     align-items: center;
 }
 
+h1 {
+    font-weight: 500;
+}
+
+h2, h3, h4 {
+    font-weight: 450;
+}
+
 nav {
-    font-size: 0.8rem;
+    font-size: 1rem;
     z-index: 2;
     padding: 10px;
     border-radius: 15px;
@@ -131,18 +139,18 @@ nav li a:hover {
 }
 
 section {
-    height: 4000px;
     width: 80%;
     margin: 0 auto;
 }
 
 .section-title {
-    margin-top: 0;
+    margin: 0;
     font-size: 1.5rem;
 }
 
 .section-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .wide-card {
@@ -156,4 +164,23 @@ section {
 
 .card-right {
     width: 80%;
+}
+
+#about {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills span{
+    border: 1px solid rgb(var(--secondary-colour));
+    background-color: rgba(var(--secondary-colour), 0.3);
+    border-radius: 6px;
+    padding: 5px;
 }
