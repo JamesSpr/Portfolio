@@ -1,34 +1,45 @@
 :root {
-    font-size: 16pt;
-    --primary-colour: #f0fcff;
-    --secondary-colour: #7991c7;
-    --gradient-colour: #9bb5df;
-    --font-colour: #40485a;
+    font-size: 14pt;
+    --font-colour: 235, 235, 235; 
+    --primary-colour: 35, 101, 89;
+    --secondary-colour: 97, 189, 149;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-colour: 80, 115, 145;
+        --secondary-colour: 45, 49, 66;
+    }
 }
 
 .darkmode {
-    --primary-colour: #2b2d2e;
-    --secondary-colour: #3e4142;
-    --gradient-colour: #3e4142;
-    --font-colour: #f9f9f9;
+    --primary-colour: 80, 115, 145;
+    --secondary-colour: 45, 49, 66;
+}
+
+@media (prefers-color-scheme: dark) {
+    .darkmode {
+        --primary-colour: 35, 101, 89;
+        --secondary-colour: 97, 189, 149;
+    }
 }
 
 html,body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--font-colour);
+    color: rgb(var(--font-colour));
 }
 
 body {
     margin: 0;
-    background: var(--primary-colour);
+    background: rgb(var(--primary-colour));
 }
 
 header {
     position: fixed;
-    top: 0;
+    top: 5;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 60px;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -38,14 +49,22 @@ header {
 nav {
     font-size: 0.8rem;
     z-index: 2;
+    padding: 10px;
+    border-radius: 15px;
+}
 
-    border-radius: 20px;
+#nav.active {
+    background-color: rgba(var(--secondary-colour), 0.6);
+}
+
+nav li a.active {
+    background-color: rgba(var(--secondary-colour), 0.9);
 }
 
 nav ol {
     list-style-type: none;
-    /* padding: 5px 0px; */
     margin: 5px;
+    padding: 0;
 }
 
 nav li {
@@ -55,68 +74,43 @@ nav li {
 
 nav li a {
     text-decoration: none;    
-    color: var(--font-colour);
-    padding: 12px;
-    border-radius: 20px;
+    color: rgb(var(--font-colour));
+    padding: 10px;
+    border-radius: 25px;
 }
 
 nav li a:hover {
-    color: rgb(249,249,249);
-    background-color: var(--secondary-colour);
-    border-radius: 20px;
+    background-color: rgb(var(--secondary-colour));
+    border-radius: 25px;
 }
-
-#nav-top a {
-    transition: all 1s;
-    color: rgb(249,249,249);
-}
-
-#nav-top a:hover {
-    color: var(--font-colour);
-    transition: none;
-}
-
-#nav-active a {
-    transition: all 1s;
-}
-
-#nav-active a:hover {
-    transition: none;
-}
-
 
 #hero {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
-    background-image: linear-gradient(to bottom, var(--secondary-colour) 0%, var(--gradient-colour) 50%, var(--primary-colour) 100%);
-    color: rgb(249,249,249);
-
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; */
 }
 
 .hero-content {
     position: relative;
-    color: rgb(249,249,249);
 }
 
 .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
+
+    font-weight: 500;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-top: 0;
+
+    font-weight: 500;
 }
 
 .hero-button {
@@ -126,28 +120,40 @@ nav li a:hover {
     margin-left: auto;
     margin-right: auto;
 
-    border: 2px solid rgb(249,249,249);
+    
+    background-color: rgb(var(--secondary-colour));
     border-radius: 10px;
 
-    color: rgb(249,249,249);
+    font-weight: 650;
+    font-size: 1.1rem;
     text-decoration: none;
-    font-size: 1rem;
+    color: rgb(var(--primary-colour));
 }
 
 section {
-    height: 400px;
+    height: 4000px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .section-title {
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
-section {
+.wide-card {
+    display: flex;
+    
+}
+
+.card-left {
+    width: 20%;
+}
+
+.card-right {
     width: 80%;
-    margin: 0 auto;
 }
