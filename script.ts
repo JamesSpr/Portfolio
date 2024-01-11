@@ -1,64 +1,64 @@
 // Navigation Bar Scroll Effect
-const navScrollChanges = (scrollY) => {
-    let nav = document.getElementById("nav");
-    if(!nav) { return } // Don't run anything if nav is not found.
+// document.addEventListener("scroll", (event) => {
+//     navScrollChanges(window.scrollY);
+// })
 
-    if(scrollY > 0) {
-        nav && nav.classList.add("active");
-    }
-    else {
-        nav && nav.classList.remove("active");
-    }
+// const navScrollChanges = (scrollY) => {
+//     let nav = document.getElementById("nav");
+//     if(!nav) { return } // Don't run anything if nav is not found.
 
-    activeNavButton(nav, scrollY)
-}
+//     if(scrollY > 0) {
+//         nav && nav.classList.add("active");
+//     }
+//     else {
+//         nav && nav.classList.remove("active");
+//     }
 
-// Activate the nav button based on the scroll height
-const activeNavButton = (nav, scrollY) => {
+//     // activeNavButton(nav, scrollY)
+// }
 
-    let navChildren = nav.children[0].children
-    let hero = document.getElementById("hero")
-    let about = document.getElementById("about")
-    let projects = document.getElementById("projects")
-    let contact = document.getElementById("contact")
+// // Activate the nav button based on the scroll height
+// const activeNavButton = (nav, scrollY) => {
 
-    if(contact && Math.floor(contact?.getBoundingClientRect().top) <= 0) {
-        for(var i = 0; i < nav.children[0].children.length; i++) {
-            navChildren[i].children[0].classList.remove("active");
-            if(navChildren[i].id == "nav-contact") {
-                navChildren[i].children[0].classList.add("active");
-            }
-        }
-    }
-    else if(projects && Math.floor(projects?.getBoundingClientRect().top) <= 0) {
-        for(var i = 0; i < nav.children[0].children.length; i++) {
-            navChildren[i].children[0].classList.remove("active");
-            if(navChildren[i].id == "nav-projects") {
-                navChildren[i].children[0].classList.add("active");
-            }
-        }
-    }
-    else if(about && Math.floor(about?.getBoundingClientRect().top) <= 0) {
-        for(var i = 0; i < nav.children[0].children.length; i++) {
-            navChildren[i].children[0].classList.remove("active");
-            if(navChildren[i].id == "nav-about") {
-                navChildren[i].children[0].classList.add("active");
-            }
-        }
-    }
-    else { //about && Math.floor(about?.getBoundingClientRect().top) > 0
-        for(var i = 0; i < nav.children[0].children.length; i++) {
-            navChildren[i].children[0].classList.remove("active");
-            if(navChildren[i].id == "nav-home") {
-                navChildren[i].children[0].classList.add("active");
-            }
-        }
-    }
-}
+//     let navChildren = nav.children[0].children
+//     let hero = document.getElementById("hero")
+//     let about = document.getElementById("about")
+//     let projects = document.getElementById("projects")
+//     let contact = document.getElementById("contact")
 
-document.addEventListener("scroll", (event) => {
-    navScrollChanges(window.scrollY);
-})
+//     if(contact && Math.floor(contact?.getBoundingClientRect().top) <= 0) {
+//         for(var i = 0; i < nav.children[0].children.length; i++) {
+//             navChildren[i].children[0].classList.remove("active");
+//             if(navChildren[i].id == "nav-contact") {
+//                 navChildren[i].children[0].classList.add("active");
+//             }
+//         }
+//     }
+//     else if(projects && Math.floor(projects?.getBoundingClientRect().top) <= 0) {
+//         for(var i = 0; i < nav.children[0].children.length; i++) {
+//             navChildren[i].children[0].classList.remove("active");
+//             if(navChildren[i].id == "nav-projects") {
+//                 navChildren[i].children[0].classList.add("active");
+//             }
+//         }
+//     }
+//     else if(about && Math.floor(about?.getBoundingClientRect().top) <= 0) {
+//         for(var i = 0; i < nav.children[0].children.length; i++) {
+//             navChildren[i].children[0].classList.remove("active");
+//             if(navChildren[i].id == "nav-about") {
+//                 navChildren[i].children[0].classList.add("active");
+//             }
+//         }
+//     }
+//     else { //about && Math.floor(about?.getBoundingClientRect().top) > 0
+//         for(var i = 0; i < nav.children[0].children.length; i++) {
+//             navChildren[i].children[0].classList.remove("active");
+//             if(navChildren[i].id == "nav-home") {
+//                 navChildren[i].children[0].classList.add("active");
+//             }
+//         }
+//     }
+// }
 
 // // Dark Mode
 // const toggleDarkMode = () => {
@@ -74,13 +74,13 @@ document.addEventListener("scroll", (event) => {
 //     }
 // }
 
-window.addEventListener("load", () => {
+// window.addEventListener("load", () => {
     // let darkMode = localStorage.getItem("darkMode")
     
     // if(darkMode === "enabled") {
     //     document.body.classList.add("darkmode")
     // }
 
-    let nav = document.getElementById("nav");
-    nav && activeNavButton(nav, window.scrollY);
-})
+    // let nav = document.getElementById("nav");
+    // nav && activeNavButton(nav, window.scrollY);
+// })

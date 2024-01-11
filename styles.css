@@ -72,13 +72,6 @@ nav {
     background-color: rgba(var(--secondary-colour), 0.6);
 }
 
-/* #nav.active {
-}
-
-nav li a.active {
-    background-color: rgba(var(--secondary-colour), 0.9);
-} */
-
 nav ol {
     list-style-type: none;
     margin: 5px;
@@ -96,11 +89,6 @@ nav li a {
     padding: 10px;
     border-radius: 25px;
     text-shadow: 2px 0px 10px rgb(var(--secondary-colour));
-}
-
-nav li a:hover {
-    background-color: rgb(var(--secondary-colour));
-    border-radius: 25px;
 }
 
 #hero {
@@ -131,7 +119,6 @@ nav li a:hover {
     margin-bottom: 0.5rem;
 
     font-weight: 500;
-    /* text-shadow: 2px 0px 10px rgb(var(--secondary-colour)); */
     text-shadow:
     0.03em 0 rgb(var(--secondary-colour)),
     0 0.03em rgb(var(--secondary-colour)),
@@ -141,7 +128,6 @@ nav li a:hover {
     -0.03em 0.03em rgb(var(--secondary-colour)),
     0.03em -0.03em rgb(var(--secondary-colour)),
     0.03em 0.03em rgb(var(--secondary-colour));
-    /* color: rgb(var(--secondary-colour)); */
 }
 
 .hero-subtitle {
@@ -219,7 +205,7 @@ section {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1200px) {
     .card-left {
         min-width: 0;
     }
@@ -227,10 +213,6 @@ section {
     .wide-card {
         flex-direction: column;
         gap: 0px;
-    }
-
-    .project-card-wrapper { 
-        grid-template-columns: none;
     }
 }
 
@@ -251,6 +233,7 @@ section {
     background-color: rgba(var(--secondary-colour), 0.3);
     border-radius: 6px;
     padding: 5px;
+    min-width: fit-content;
 }
 
 .project-card-wrapper {
@@ -274,7 +257,14 @@ section {
     color: rgb(var(--font-colour));
 }
 
+@media screen and (max-width: 1350px) {
+    .project-card-wrapper { 
+        grid-template-columns: none;
+    }
+}
+
 .project-card:hover {
+    background-color: rgba(var(--secondary-colour), 0.05);
     border: 1px solid rgb(var(--secondary-colour));
 }
 
@@ -286,13 +276,15 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
 }
 
 .project-card-tags span{
-    background-color: rgba(var(--secondary-colour), 0.05);
+    background-color: rgba(var(--secondary-colour), 0.1);
     border-radius: 6px;
     padding: 10px;
+    min-width: fit-content;
 }
 
 footer {
