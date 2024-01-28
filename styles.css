@@ -106,7 +106,7 @@ nav li a {
     background-position: center center;
     background-attachment: fixed;
 
-    box-shadow: inset 0 -10px 20px -10px rgb(var(--secondary-colour));
+    /* box-shadow: inset 0 -10px 20px -10px rgb(var(--secondary-colour)); */
 }
 
 .hero-content {
@@ -186,7 +186,7 @@ section {
 .wide-card {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 20px;
     margin: 10px 0;
 }
