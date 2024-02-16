@@ -340,3 +340,14 @@ footer p {
     background-color: rgba(var(--secondary-colour), 0.75);
     color: rgb(var(--font-colour));
 }
+
+.gihub-project-link-icon {
+    position: absolute;
+    top: 5px;
+    left: calc(100% - 24px - 5px);
+}
+
+.small-icon {
+    height: 24px;
+    width: 24px;
+}
